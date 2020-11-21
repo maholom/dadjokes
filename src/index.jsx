@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { render } from 'react-dom';
 import './index.html';
 import './style.css';
 
 const App = () => {
+  const [pocetLike, setPocetLike] = useState(0)
+  const [pocetDislike, setPocetDislike] = useState(0)
+
   return (
   <>
     <div className="container">
@@ -22,10 +25,15 @@ const App = () => {
         </div>
 
         <div className="joke__likes">
-          <button id="btn-up" className="btn-like btn-like--up"></button>
-          <span id="likes-up" className="likes-count likes-count--up">0</span>
-          <button id="btn-down" className="btn-like btn-like--down"></button>
-          <span id="likes-down" className="likes-count likes-count--down">0</span>
+
+          <button onClick={() => {
+        setPocetLike(pocetLike + 1);}} id="btn-up" className="btn-like btn-like--up"></button>
+          <span id="likes-up" className="likes-count likes-count--up">{pocetLike}</span>
+
+          <button onClick={() => {
+        setPocetDislike(pocetDislike + 1);}}
+          id="btn-down" className="btn-like btn-like--down"></button>
+          <span id="likes-down" className="likes-count likes-count--down">{pocetDislike}</span>
         </div>
       </div>
     </div>
