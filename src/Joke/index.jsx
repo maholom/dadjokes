@@ -5,15 +5,15 @@ import './style.css';
 export const Joke = (props) => {
 
 const [likes, setLikes] = useState(props.likes);
-const [dislikes, setDislikes] = useState(props.dislikes)
+const [dislikes, setDislikes] = useState(props.dislikes);
 
 
   const handleClickLike = () => {
-    setLikes( likes + 1);
+    setLikes(likes + 1);
     }
 
   const handleClickDislike = () => {
-    setDislikes( dislikes + 1);
+    setDislikes(dislikes + 1);
   }
 
   return (
@@ -33,11 +33,11 @@ const [dislikes, setDislikes] = useState(props.dislikes)
         <div className="joke__likes">
 
           <button onClick={handleClickLike} id="btn-up" className="btn-like btn-like--up"></button>
-          <span id="likes-up" className="likes-count likes-count--up">{props.likes}</span>
+          <span id="likes-up" className="likes-count likes-count--up">{likes}</span>
 
           <button onClick={handleClickDislike}
           id="btn-down" className="btn-like btn-like--down"></button>
-          <span id="likes-down" className="likes-count likes-count--down">{props.dislikes}</span>
+          <span id="likes-down" className="likes-count likes-count--down">{dislikes}</span>
         </div>
       </div>
     </div>
