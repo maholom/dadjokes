@@ -86,8 +86,8 @@ const App = () => {
       id={joke.id}
       name={joke.name}
       text={joke.text}
-      like={joke.likes}
-      dislike={joke.dislikes}
+      likes={joke.likes}
+      dislikes={joke.dislikes}
           />))
 }
 </>)};
